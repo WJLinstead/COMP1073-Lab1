@@ -41,7 +41,8 @@
         	// 4. Get the Google Maps short URL from the string, using the character index number of the comma (use above var, commaLocation), and store it as a variable, called googleUrl
             var googleUrl = input.slice(-36,-4);
         	// 5. Build a new string that is an HTML hyperlink, using the Google Maps URL (googleUrl) as the href, the airport code (airportCode), a dash (-), the airport name (airportName), and set it as the value of the result variable (var result = ...) (hint - use concatenation to build out each part of the HTML anchor element, taking care to use the right quotes)
-        	var result = googleUrl.concat("/",airportCode,"-",airportName,);
+        	var result = "<a href='" + airportCode +"'>" + airportCode + " - " + airportName + "</a>";
+                
         	/* ----------------------------------------------- */
         	// Create a new list item element
         	var listItem = document.createElement('li');
